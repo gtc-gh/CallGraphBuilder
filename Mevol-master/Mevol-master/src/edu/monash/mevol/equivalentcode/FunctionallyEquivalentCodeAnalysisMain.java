@@ -25,13 +25,5 @@ public class FunctionallyEquivalentCodeAnalysisMain {
         fecAnalysis.analyse(MevolClient.methodsRepo, MevolClient.methodsRepo2,
                 MevolClient.updatedMethods, outputPath, args[0], args[1]);
 
-        // used for runtime permission check
-        String runtimeOutputTxtPath1 = "C:\\Users\\gtc\\Desktop\\test\\runtimePermissionOutput1.txt";
-        String runtimeOutputTxtPath2 = "C:\\Users\\gtc\\Desktop\\test\\runtimePermissionOutput2.txt";
-
-        // call the function to output the runtime exception check
-        // RuntimePermissionMapping.doTheMapping(new String[] {args[0]}, runtimeOutputTxtPath1);
-        // RuntimePermissionMapping.doTheMapping(new String[] {args[1]}, runtimeOutputTxtPath2);
-
     }
 }
