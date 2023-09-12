@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="93d57098-cb7d-4b80-8f5c-feb4ac2fd304" name="变更" comment="update">
       <changelist_data name="ink1023" email="58318133+ink1023@users.noreply.github.com" />
@@ -27,51 +30,12 @@
       <change afterPath="$PROJECT_DIR$/../Andriod Studio Program/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Andriod Studio Program/app/src/main/res/values/themes.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Andriod Studio Program/app/src/test/java/com/example/myapplication/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_poi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_poi_ooxml.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/mevol.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/ClassOrInterfaceVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/CommonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaFileChangeDetector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaFileComparison.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaFileExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaFileFieldExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaFileMethodExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaRepoComparison.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaRepoMethodExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaSourceVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/MethodSig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/MethodSigHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/MevolClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/WriteToCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/equivalentcode/FunctionallyEquivalentCodeAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/equivalentcode/FunctionallyEquivalentCodeAnalysisMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/runtimepermission/RuntimePermissionMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mevol-master/tool/runFeca4j.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/GTCClient.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Zoom.lnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gsview64.exe.lnk" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gtc/崴大大二下/Python 项目/.idea/Python 项目.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gtc/崴大大二下/springboot+vue 框架/.idea/springboot+vue 框架.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gtc/崴大大二下/springboot+vue 框架/springboot-vue-demo/springboot/demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gtc/崴大大二下/springboot-vue-demo-master/springboot/springboot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymalloc.c" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/pythonProject.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pythonProject/Gaussian_elim.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pythonProject/xin/build/xin/Analysis-00.toc" afterDir="false" />
@@ -1079,26 +1043,14 @@
       <change afterPath="$PROJECT_DIR$/../pythonProject/xin/xin/xin.pkg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pythonProject/xin/xin/xref-xin.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../to do list.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../~$00 assignment-1.docx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../未命名2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mevol-master/mevol.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mevol-master/mevol.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaFileFieldExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/JavaFileFieldExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/WriteToCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/WriteToCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/equivalentcode/FunctionallyEquivalentCodeAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/equivalentcode/FunctionallyEquivalentCodeAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/equivalentcode/FunctionallyEquivalentCodeAnalysisMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mevol-master/src/edu/monash/mevol/equivalentcode/FunctionallyEquivalentCodeAnalysisMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/Rainbow.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/dataBase_food.rainbow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/dataBase_seatsMap.rainbow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/dataBase_superAdminPassword.rainbow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/dataBase_user.rainbow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/rainbow_CORE.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/rainbow_CORE.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/rainbow_IO.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/rainbow_IO.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/rainbow_UI.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/rainbow_UI.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project_files/一键编译.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../实验报告-中小饭店点餐系统-C语言程序设计期末大作业.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1127,15 +1079,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="d09437ea-931e-42a0-b909-d3541c54f705" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2UbC3MEz3bg7vEA9PSSpSAsjxOL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -1161,7 +1110,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "MavenSettings",
@@ -1178,7 +1127,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
       <option name="MAIN_CLASS_NAME" value="edu.monash.mevol.equivalentcode.FunctionallyEquivalentCodeAnalysisMain" />
       <module name="mevol" />
-      <option name="PROGRAM_PARAMETERS" value="C:\Users\gtc\Desktop\framework\platform_frameworks_base\core\java C:\Users\gtc\Desktop\platform_frameworks_base-android10-c2f2-s1-release\platform_frameworks_base-android10-c2f2-s1-release\core\java" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\gtc\Desktop\d1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="edu.monash.mevol.equivalentcode.*" />
@@ -1207,6 +1156,11 @@
       <item itemvalue="Application.FunctionallyEquivalentCodeAnalysisMain" />
       <item itemvalue="Application.MevolClient" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FunctionallyEquivalentCodeAnalysisMain" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -1241,6 +1195,7 @@
       <workItem from="1694141759618" duration="2423000" />
       <workItem from="1694144207823" duration="900000" />
       <workItem from="1694147135595" duration="639000" />
+      <workItem from="1694491223781" duration="5049000" />
     </task>
     <servers />
   </component>

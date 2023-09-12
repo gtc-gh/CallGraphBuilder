@@ -1,6 +1,7 @@
 package edu.monash.mevol.equivalentcode;
 
 import com.github.javaparser.ParseException;
+import edu.monash.mevol.GTCClient;
 import edu.monash.mevol.MevolClient;
 import edu.monash.mevol.runtimepermission.RuntimePermissionMapping;
 import edu.monash.mevol.CommonUtils;
@@ -17,13 +18,14 @@ import java.io.IOException;
 public class FunctionallyEquivalentCodeAnalysisMain {
     public static void main(String[] args) throws IOException, ParseException {
         // Mevol
-        MevolClient.main(new String[] {args[0], args[1]});
+        //MevolClient.main(new String[] {args[0], args[1]});
+        GTCClient.main(new String[] {args[0]});
 
-        String outputPath = "C:\\Users\\gtc\\Desktop\\test\\output.csv";
+        String outputPath1 = "C:\\Users\\gtc\\Desktop\\test\\outputMethods.csv";
+        String outputPath2 = "C:\\Users\\gtc\\Desktop\\test\\outputFields.csv";
 
         FunctionallyEquivalentCodeAnalysis fecAnalysis = new FunctionallyEquivalentCodeAnalysis();
-        fecAnalysis.analyse(MevolClient.methodsRepo, MevolClient.methodsRepo2,
-                MevolClient.updatedMethods, outputPath, args[0], args[1]);
+        fecAnalysis.analyse(GTCClient.allMethods, GTCClient.methodsRepo, args[0], outputPath1, outputPath2);
 
     }
 }

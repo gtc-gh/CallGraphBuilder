@@ -16,19 +16,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class FunctionallyEquivalentCodeAnalysis
 {
     // Check whether it could be analysed. The signature is primary key and output all the other relevant information.
-    public static boolean checkAnalysed(MethodSig ms1, MethodSig ms2) {
+    public static boolean checkAnalysed(MethodSig ms1) {
 
         // null check
-        if ((ms1 == null) || (ms2 == null))
-            return false;
-
-        // primary key
-        if (!ms1.getSignature().equals(ms2.getSignature()))
+        if (ms1 == null)
             return false;
 
         // unallowable
-        if (ms1.isPrivate || ms1.isInternal || ms1.isHidden || ms1.isAbstract || ms1.isNative ||
-                ms2.isPrivate || ms2.isInternal || ms2.isHidden || ms2.isAbstract || ms2.isNative) {
+        if (ms1.isPrivate || ms1.isInternal || ms1.isHidden || ms1.isAbstract || ms1.isNative) {
             return false;
         }
 
@@ -48,7 +43,7 @@ public class FunctionallyEquivalentCodeAnalysis
         WriteToCSV.writeToWorkbook(row, 0, ms.getSignature());
         WriteToCSV.writeToWorkbook(row, 1, ms.body);
         WriteToCSV.writeToWorkbook(row, 2, ms.getFullName());
-        WriteToCSV.writeToWorkbook(row, 3, String.valueOf(ms.getClass()));
+        WriteToCSV.writeToWorkbook(row, 3, ms.getDeclaredClass());
         WriteToCSV.writeToWorkbook(row, 4, ms.comment);
         WriteToCSV.writeToWorkbook(row, 5, ms.rawAnnotations);
         if (checkCallback(ms))
@@ -60,53 +55,50 @@ public class FunctionallyEquivalentCodeAnalysis
 
     // analyse
     // method_signature1, method_signature2, the set of methods whose bodies are changed
-    public static void analyse(Map<String, MethodSig> methodRepo, Map<String, MethodSig> methodRepo2,
-                          Set<String> updatedMethods, String outputPath, String inputPath1, String inputPath2)
+    public static void analyse(Set<String> allMethods, Map<String, MethodSig> methodRepo,
+                               String inputPath1, String outputPath1, String outputPath2)
             throws IOException, ParseException {
         // 1. Create a workbook.
         Workbook workbook = new XSSFWorkbook();
 
         // 2. Create two sheets
-        Sheet sheet1 = workbook.createSheet("VersionASignature");
-        Sheet sheet2 = workbook.createSheet("VersionBSignature");
+        Sheet sheet1 = workbook.createSheet("Signature");
 
         // Position for current csv file.
-        String[] firstRow = {"Signature", "Body", "Full Name", "Class", "Comment", "Annotation", "Callback"};
+        String[] firstRow = {"Method Signature", "Method Body", "Method Full Name", "Method Class",
+                "Method Comment", "Method Annotation", "Callback"};
         int row = 0;
 
         Row row1 = sheet1.createRow(row);
-        Row row2 = sheet2.createRow(row);
 
-        for (int col = 0; col < firstRow.length; col ++) {
+        for (int col = 0; col < firstRow.length; col ++)
             WriteToCSV.writeToWorkbook(row1, col, firstRow[col]);
-            WriteToCSV.writeToWorkbook(row2, col, firstRow[col]);
-        }
+
         row ++;
 
         // 3. Output all necessary information
-        for (String method : updatedMethods)
+        for (String method : allMethods)
         {
             MethodSig ms1 = methodRepo.get(method);
-            MethodSig ms2 = methodRepo2.get(method);
 
-            if (!checkAnalysed(ms1, ms2))
+            if (!checkAnalysed(ms1))
                 continue;
 
             Row sheet1Row_i = sheet1.createRow(row);
-            Row sheet2Row_i = sheet2.createRow(row);
 
             // retrieve all relevant information
             methodSignatureWrite(sheet1Row_i, ms1);
-            methodSignatureWrite(sheet2Row_i, ms2);
 
             row ++;  // move to next row
         }
 
-        // create the other two sheets to store the fields
-        workbook = JavaFileFieldExtractor.getFields(workbook, inputPath1, inputPath2);
-
         // 4. Write to CSV file from workbook
-        WriteToCSV.workbookWriteToCSVAndClose(workbook, outputPath);
+        WriteToCSV.workbookWriteToCSVAndClose(workbook, outputPath1);
+
+        // create the other workbook to store the fields
+        Workbook workbook2 = new XSSFWorkbook();
+        workbook2 = JavaFileFieldExtractor.getFields(workbook2, inputPath1);
+        WriteToCSV.workbookWriteToCSVAndClose(workbook2, outputPath2);
     }
 
 }

@@ -36,5 +36,6 @@
     </orderEntry>
     <orderEntry type="library" name="apache.poi" level="project" />
     <orderEntry type="library" name="apache.poi.ooxml" level="project" />
+    <orderEntry type="library" name="opencsv" level="project" />
   </component>
 </module>
