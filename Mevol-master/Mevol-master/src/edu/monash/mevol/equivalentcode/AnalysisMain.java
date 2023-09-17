@@ -2,10 +2,6 @@ package edu.monash.mevol.equivalentcode;
 
 import com.github.javaparser.ParseException;
 import edu.monash.mevol.GTCClient;
-import edu.monash.mevol.MevolClient;
-import edu.monash.mevol.runtimepermission.RuntimePermissionMapping;
-import edu.monash.mevol.CommonUtils;
-import edu.monash.mevol.JavaRepoMethodExtractor;
 
 import java.io.IOException;
 
@@ -15,7 +11,7 @@ import java.io.IOException;
  *
  * For collecting functionally equivalent code
  */
-public class FunctionallyEquivalentCodeAnalysisMain {
+public class AnalysisMain {
     public static void main(String[] args) throws IOException, ParseException {
         // Mevol
         //MevolClient.main(new String[] {args[0], args[1]});
