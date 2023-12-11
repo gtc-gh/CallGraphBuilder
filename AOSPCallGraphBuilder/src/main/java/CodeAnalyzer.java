@@ -34,73 +34,11 @@ import java.util.stream.Collectors;
 public class CodeAnalyzer {
 
     public static void main(String[] args) throws IOException {
-        String projectPath = "C:\\Users\\gtc\\Desktop\\AOSPScourceCode\\level-22-5.1.0_r1";
-        outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\22_calling_pairs_signature.csv";
-        outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\22_calling_pairs_field.csv";
+        String projectPath = "C:\\Users\\gtc\\Desktop\\AOSPScourceCode\\level-28-9.0.0_r1";
+        outputCSVPath = "C:\\Users\\gtc\\Desktop\\AOSPCallGraphBuilder\\cg_results\\28_calling_pairs_signature.csv";
+        outputCSVPathField = "C:\\Users\\gtc\\Desktop\\AOSPCallGraphBuilder\\cg_results\\28_calling_pairs_field.csv";
         analyzeProject(projectPath);
         System.out.println("The number of unsolved API is: " + unsolvedCount);
-
-//        String dir = "C:\\Users\\gtc\\Desktop\\AOSPScourceCode";
-//        File root = new File(dir);
-//        for (File file : root.listFiles()) {
-//            if (file.isDirectory()) {
-//                if (file.getName().contains("25")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\25_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\25_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//                if (file.getName().contains("26")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\26_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\26_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//                if (file.getName().contains("27")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\27_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\27_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//                if (file.getName().contains("28")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\28_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\28_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//                if (file.getName().contains("29")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\29_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\29_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//                if (file.getName().contains("30")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\30_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\30_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//                if (file.getName().contains("31")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\31_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\31_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//                if (file.getName().contains("32")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\32_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\32_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//                if (file.getName().contains("33")) {
-//                    projectPath = file.getAbsolutePath();
-//                    outputCSVPath = "C:\\Users\\gtc\\Desktop\\cg_results\\33_calling_pairs_signature.csv";
-//                    outputCSVPathField = "C:\\Users\\gtc\\Desktop\\cg_results\\33_calling_pairs_field.csv";
-//                    analyzeProject(projectPath);
-//                }
-//            }
-//        }
-
     }
     public static String outputCSVPath = "";
     public static String outputCSVPathField = "";
@@ -161,11 +99,11 @@ public class CodeAnalyzer {
 
             currentFileNumber ++;
 
-//            if (!file.equals("C:\\Users\\gtc\\Desktop\\AOSPScourceCode\\level-21-5.0.0_r1\\android\\content\\pm\\UserInfo.java")
-//                    && !runAgain)
-//                continue;
-//            else
-//                runAgain = true;
+            if (!file.equals("C:\\Users\\gtc\\Desktop\\AOSPScourceCode\\level-28-9.0.0_r1\\com\\android\\internal\\util\\function\\pooled\\PooledLambda.java")
+                    && !runAgain)
+                continue;
+            else
+                runAgain = true;
 
             System.out.println(file);
             System.out.println("File process: " + currentFileNumber + "/" + totalJavaFileNumber + " Sig row number: "
@@ -324,6 +262,10 @@ public class CodeAnalyzer {
             if (methodName.equals("v") || methodName.equals("d") || methodName.equals("i") || methodName.equals("w")
             || methodName.equals("e") || methodName.equals("wtf"))
                 return;
+            if (methodName.equals("acquire") && (currentFileName.endsWith("PooledLambdaImpl.java") || currentFileName.endsWith("PooledLambda.java")))
+                return;
+            if (methodName.equals("acquireConstSupplier") && (currentFileName.endsWith("PooledLambda.java")))
+                return;
 
             if (visitedNodes.contains(n))
                 return; // Skip already visited nodes to avoid infinite recursion
@@ -337,6 +279,8 @@ public class CodeAnalyzer {
                 String subMethodClass = n.resolve().declaringType().getQualifiedName();
                 // Get the method signature without values
                 methodSignature = getMethodSignatureWithoutValues(n);
+
+                // System.out.println("method sig: " + methodSignature);
 
                 callChain.add(subMethodClass + "." + methodSignature);
                 // if it is in the imported classes
