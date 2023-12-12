@@ -40,6 +40,7 @@ public class CodeAnalyzer {
         analyzeProject(projectPath);
         System.out.println("The number of unsolved API is: " + unsolvedCount);
     }
+
     public static String outputCSVPath = "";
     public static String outputCSVPathField = "";
     // write to a csv file
@@ -99,11 +100,11 @@ public class CodeAnalyzer {
 
             currentFileNumber ++;
 
-            if (!file.equals("C:\\Users\\gtc\\Desktop\\AOSPScourceCode\\level-28-9.0.0_r1\\com\\android\\internal\\util\\function\\pooled\\PooledLambda.java")
-                    && !runAgain)
-                continue;
-            else
-                runAgain = true;
+//            if (!file.equals("C:\\Users\\gtc\\Desktop\\AOSPScourceCode\\level-28-9.0.0_r1\\com\\android\\internal\\util\\function\\pooled\\PooledLambda.java")
+//                    && !runAgain)
+//                continue;
+//            else
+//                runAgain = true;
 
             System.out.println(file);
             System.out.println("File process: " + currentFileNumber + "/" + totalJavaFileNumber + " Sig row number: "
